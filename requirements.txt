@@ -1,0 +1,8 @@
+# Add additional python packages you want to install to this pip requirements file.
+# For example, uncomment the following line and type `sb --build` to install
+# the Google API library to ScienceBox.
+
+# Before adding a package, check what packages are already installed with `sb conda list`.
+
+# google-api-python-client
+pandas-profiling

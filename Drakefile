@@ -1,0 +1,10 @@
+data/iris.csv <- 
+	wget https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv -O data/iris.csv
+
+%streams_by_country_bq <-
+	bqf create --script=src/sql/example/streams_by_country_undefined.py --project="data-science-golden-path" --range=20170404
+
+results/iris.html <- data/iris.csv, %streams_by_country_bq
+	jupyter nbconvert --to html --execute notebooks/examples/iris-python.ipynb --output ../../results/iris.html
+
+%results <- results/iris.html
